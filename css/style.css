@@ -1,0 +1,151 @@
+/* 'Robot' font Regular 400 & Bold 700  */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh; /* 100 viewport hight (100% of browser)*/
+    overflow-x: hidden; /* to cancel scroll bar on x-axis*/
+    box-sizing: border-box;
+    background-color: teal;
+    line-height: 1.5;
+}
+
+/* conatainer */
+.container {
+    background-color: #fafafa;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+    height: auto;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: .2s;
+}
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+/* buttons */
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background-color: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+    /* transition: transform 2s linear; */
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+button#open {
+    left: 60%;
+}
+
+button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left; 
+}
+
+/* navigation */
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-120px);
+    transition: transform .4s ease-in;
+
+}
+
+nav ul li i {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-130px);
+}
+
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-170px);
+}
+
+/* Content */
+.content {
+    margin: 50px auto;
+    max-width: 70rem;
+}
+
+.content h1{
+    color: teal;
+}
+
+.content h3{
+    color: teal;
+    margin: 15px 0;
+}
+
+.content small {
+    color: #555;
+    color: #7c6767;
+    font-style: italic;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+    padding-top: 15px;
+}
+.content img {
+    max-width: 100%;
+}
+
+
+
