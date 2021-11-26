@@ -16,6 +16,10 @@ body {
     line-height: 1.5;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
 /* conatainer */
 .container {
     background-color: #fafafa;
@@ -120,7 +124,7 @@ nav ul li + li + li {
 /* Content */
 .content {
     margin: 50px auto;
-    max-width: 70rem;
+    max-width: 62rem;
 }
 
 .content h1{
